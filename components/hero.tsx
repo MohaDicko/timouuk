@@ -43,7 +43,7 @@ export function Hero() {
           {slides.map((slide, index) => (
             <div className="relative flex-[0_0_100%] h-full min-h-screen" key={index}>
               <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60 z-10" />
-              <div className="absolute inset-0 bg-black/20 z-10" /> 
+              <div className="absolute inset-0 bg-black/20 z-10" />
               <img
                 src={slide.image || "/placeholder.svg"}
                 alt={slide.title}
@@ -51,15 +51,15 @@ export function Hero() {
               />
               <div className="absolute inset-0 z-20 flex items-center justify-center text-center pb-20">
                 <div className="container px-4">
-                  <h1 className="font-serif text-5xl md:text-7xl lg:text-9xl text-white font-light tracking-tight mb-6 drop-shadow-lg animate-in slide-in-from-bottom-8 fade-in duration-1000 delay-300 fill-mode-both">
+                  <h1 className="font-serif text-4xl md:text-7xl lg:text-9xl text-white font-light tracking-tight mb-4 md:mb-6 drop-shadow-lg animate-in slide-in-from-bottom-8 fade-in duration-1000 delay-300 fill-mode-both">
                     {slide.title}
                   </h1>
-                  <p className="text-xl md:text-3xl text-white/95 font-light tracking-wide mb-10 max-w-2xl mx-auto drop-shadow-md animate-in slide-in-from-bottom-8 fade-in duration-1000 delay-500 fill-mode-both">
+                  <p className="text-lg md:text-3xl text-white/95 font-light tracking-wide mb-8 md:mb-10 max-w-2xl mx-auto drop-shadow-md animate-in slide-in-from-bottom-8 fade-in duration-1000 delay-500 fill-mode-both">
                     {slide.subtitle}
                   </p>
                   <Button
                     size="lg"
-                    className="bg-white text-black hover:bg-white/90 text-lg px-8 py-6 rounded-none tracking-widest uppercase transition-transform hover:scale-105 animate-in slide-in-from-bottom-8 fade-in duration-1000 delay-700 fill-mode-both"
+                    className="bg-white text-black hover:bg-white/90 text-sm md:text-lg px-6 md:px-8 py-4 md:py-6 rounded-none tracking-widest uppercase transition-transform hover:scale-105 animate-in slide-in-from-bottom-8 fade-in duration-1000 delay-700 fill-mode-both"
                     asChild
                   >
                     <a href={slide.href}>{slide.cta}</a>
@@ -90,7 +90,7 @@ export function Hero() {
             <Facebook className="w-6 h-6" />
           </a>
         </div>
-        
+
         <div className="absolute left-1/2 -translate-x-1/2 bottom-8 text-white/70 animate-bounce">
           <ArrowDown className="w-6 h-6" />
         </div>

@@ -79,7 +79,7 @@ function TiltCard({ product, index }: { product: (typeof products)[0]; index: nu
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative h-96 w-full perspective-1000"
+      className="relative h-[28rem] md:h-96 w-full perspective-1000"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -105,15 +105,15 @@ function TiltCard({ product, index }: { product: (typeof products)[0]; index: nu
 
           <motion.div
             style={{ transform: "translateZ(60px)" }}
-            className="absolute bottom-0 left-0 right-0 p-8 text-white z-20"
+            className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white z-20"
           >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 shadow-lg">
-                <Icon className="w-6 h-6 text-white" />
+            <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 shadow-lg shrink-0">
+                <Icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
               </div>
-              <h3 className="font-serif text-3xl font-light tracking-wide">{product.title}</h3>
+              <h3 className="font-serif text-2xl md:text-3xl font-light tracking-wide leading-tight">{product.title}</h3>
             </div>
-            <p className="text-white/80 text-lg font-light leading-relaxed">{product.description}</p>
+            <p className="text-white/80 text-base md:text-lg font-light leading-relaxed line-clamp-2 md:line-clamp-none">{product.description}</p>
           </motion.div>
         </CardContent>
       </Card>
